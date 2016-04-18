@@ -70,35 +70,3 @@ var ImageBorder = function () {
         return rgb;
     };
 }
-    
-//$('.img-circular').each(function (index, item) {
-//    var padding = Number(item.style.padding.replace('px', ''));
-//    var height = Number(item.style.height.replace('px', ''));
-//    var width = Number(item.style.width.replace('px', ''));
-//    var toSize = 80;
-//    var toPadding = -5;
-
-//    $(item).mouseover(function () {
-//        console.log(Number(width) + 1);
-//        $(item).animate({
-//            width: width + toSize,
-//            height: height + toSize,
-//            padding: padding + toPadding,
-//            borderSize: 200
-//        }, 200);
-//        $('body').css('background', 'rgb(' + item.avgRgb.r + ',' + item.avgRgb.g + ',' + item.avgRgb.b + ')');
-
-//    });
-
-//    $(item).mouseout(function () {
-//        $(item).animate({
-//            width: width,
-//            height: height,
-//            padding: padding
-//        }, 200, function () {
-//            $(item).finish();
-//        });
-//    });
-//});
-
-
