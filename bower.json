@@ -1,0 +1,23 @@
+{
+  "name": "SvImageBorder",
+  "description": "small js lib for creating borders around images with the average RGB of the image as the border color.",
+  "main": "src/imageborder-1.1.js",
+  "keywords": [
+    "js",
+    "css",
+    "image",
+    "border"
+  ],
+  "authors": [
+    "steven vanbinst"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
