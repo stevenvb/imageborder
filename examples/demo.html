@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-    <div style="margin:auto;width:700px;align-content:center" >
+    <div id="main" style="margin:auto;width:700px;height:300px;align-content:center" >
         <ul>
             <li>
                 <a href="#">
@@ -47,6 +47,13 @@
                 diameter : "150",
                 radius: "300"
             });
+        });
+
+        $('.img-circular').each(function (index, item) {
+            $(item).mousedown(function () {
+                var averageRgb = item.avgRgb;
+                $('#main').css('background-color', 'rgb(' + averageRgb.r + ',' + averageRgb.g + ',' + averageRgb.b + ')');
+            })
         });
     </script>
 </body>
