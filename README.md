@@ -9,7 +9,7 @@ no dependecies.
  ```<script src="../src/imageborder-1.1.js"></script>```
  
 # Usage
- init(className,{options});
+ ```init(className,{options});
  
  ImageBorder().init(className, {
                 size : "20",
