@@ -3,7 +3,9 @@ Small js lib for creating borders around images with the average RGB of the imag
 
 no dependecies.
 
--- works only with images from the same domain.
+> note: this works only with images from the same domain.
+
+![alt text](https://github.com/stevenvb/imageborder/blob/master/examples/screenshot.png "Example Chrome")
 
 # Install
  ```<script src="../src/imageborder-1.1.js"></script>```
