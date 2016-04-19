@@ -16,15 +16,17 @@ var ImageBorder = function () {
             diameter = (options.diameter || defaultSize) + 'px',
             padding = (options.padding || defaultPadding) + 'px';
 
-            $(className).each(function (index, item) {
-                var rgb = getAverageRGB(item, 3);
-                item.style.borderRadius = borderRadius;
-                item.style.border = borderSize + 'px solid rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')';
-                item.style.width = diameter;
-                item.style.height = diameter;
-                item.style.padding = padding;
-                item.avgRgb = rgb;
-            });
+            var images = document.getElementsByClassName(className);
+            var i;
+            for (i = 0; i < images.length; i++) {
+                var rgb = getAverageRGB(images[i], 3);
+                images[i].style.borderRadius = borderRadius;
+                images[i].style.border = borderSize + 'px solid rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')';
+                images[i].style.width = diameter;
+                images[i].style.height = diameter;
+                images[i].style.padding = padding;
+                images[i].avgRgb = rgb;
+            }
         }
     }
 
