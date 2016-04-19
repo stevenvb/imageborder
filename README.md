@@ -1,5 +1,7 @@
 # imageborder
 Small js lib for creating borders around images with the average RGB of the image as the border color.
+no dependecies.
+-- works only with images from the same domain.
 
 # Install
  ```<script src="../src/imageborder-1.1.js"></script>```
