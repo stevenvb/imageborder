@@ -3,7 +3,9 @@ Small js lib for creating borders around images with the average RGB of the imag
 
 no dependecies.
 
-> note: this works only with images from the same domain.
+> note: this works only with images from the same domain, otherwise you get this SecurityException
+
+> DOMException: Failed to execute 'getImageData' on 'CanvasRenderingContext2D': The canvas has been tainted by cross-origin data.
 
 ![alt text](https://github.com/stevenvb/imageborder/blob/master/examples/screenshot.png "Example Chrome")
 
