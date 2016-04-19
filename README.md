@@ -11,7 +11,9 @@ no dependecies.
  ```<script src="../src/imageborder-1.1.js"></script>```
  
 # Usage
- ```init(className,{options});
+To enable the borders set a classname on the images and pass the classname to the ```init(className,option);``` function.
+
+ ```
  
  ImageBorder().init(className, {
                 size : "20",
@@ -19,3 +21,11 @@ no dependecies.
                 diameter : "150",
                 radius: "300"
             });
+ ```
+ The average color for the image can be retrieved :
+ 
+ ```  $('.img-circular').each(function (index, item) {
+                var averageRgb = item.avgRgb;
+      });
+      ```
+
