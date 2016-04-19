@@ -58,7 +58,6 @@ var ImageBorder = function () {
         } catch (e) {
             return defaultRGB;
         }
-
         length = data.data.length;
         while ((i += blockSize * 4) < length) {
             ++count;
