@@ -10,7 +10,7 @@ var ImageBorder = function () {
         init: function (className, options) {
             if (!options)
                 options = {};
-
+             
             var borderSize = (options.size || defaultBorder),
             borderRadius = (options.radius || defaultBorderRadius) + 'px',
             diameter = (options.diameter || defaultSize) + 'px',
@@ -19,13 +19,22 @@ var ImageBorder = function () {
             var images = document.getElementsByClassName(className);
             var i;
             for (i = 0; i < images.length; i++) {
-                var rgb = options.color || getAverageRGB(images[i], 3);
-                images[i].style.borderRadius = borderRadius;
-                images[i].style.border = borderSize + 'px solid rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')';
-                images[i].style.width = diameter;
-                images[i].style.height = diameter;
-                images[i].style.padding = padding;
-                images[i].avgRgb = rgb;
+                setValues(images[i]);
+                // image may not be loaded
+                images[i].onload = function (event) {
+                    setValues(event.srcElement);
+                };
+            }
+
+            function setValues(image) {
+                var rgb = options.color || getAverageRGB(image, 3);
+                image.style.borderRadius = borderRadius;
+                image.style.border = borderSize + 'px solid rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')';
+                image.style.width = diameter;
+                image.style.height = diameter;
+                image.style.padding = padding;
+                image.avgRgb = rgb;
+                image.hidden = false;
             }
         }
     }
