@@ -19,7 +19,7 @@ var ImageBorder = function () {
             var images = document.getElementsByClassName(className);
             var i;
             for (i = 0; i < images.length; i++) {
-                var rgb = getAverageRGB(images[i], 3);
+                var rgb = options.color || getAverageRGB(images[i], 3);
                 images[i].style.borderRadius = borderRadius;
                 images[i].style.border = borderSize + 'px solid rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')';
                 images[i].style.width = diameter;
